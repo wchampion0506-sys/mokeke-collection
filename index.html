@@ -3,55 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイ・モケケ図鑑</title>
+    <title>全国ご当地モケケ図鑑</title>
     <style>
-        body { font-family: sans-serif; background-color: #f7f7f7; padding: 20px; color: #333; }
-        h1 { text-align: center; color: #ff6f61; }
-        .area-section { margin-bottom: 30px; }
-        .area-title { font-size: 1.2em; color: #555; border-bottom: 2px solid #ff6f61; margin-bottom: 10px; padding-bottom: 5px; }
-        .collection-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; padding: 0; list-style: none; }
-        .mokeke-card { background-color: #fff; border-radius: 10px; padding: 10px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .mokeke-name { font-weight: bold; margin: 5px 0; font-size: 0.9em; }
+        body { font-family: sans-serif; background-color: #fce4ec; padding: 15px; color: #333; }
+        h1 { text-align: center; color: #d81b60; }
+        .area-section { margin-bottom: 20px; background: white; padding: 10px; border-radius: 10px; }
+        .area-title { color: #880e4f; border-left: 5px solid #d81b60; padding-left: 10px; margin-bottom: 10px; }
+        .collection-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; padding: 0; list-style: none; }
+        .mokeke-card { background-color: #fdfdfd; border: 1px solid #eee; border-radius: 8px; padding: 8px; text-align: center; }
+        .mokeke-name { font-size: 0.8em; margin: 5px 0; }
         .check-input { display: none; }
-        .check-label { display: block; background: #ff6f61; color: white; border-radius: 20px; padding: 5px; cursor: pointer; font-size: 0.8em; }
+        .check-label { display: block; background: #e91e63; color: white; border-radius: 15px; padding: 4px; cursor: pointer; font-size: 0.75em; }
         .check-input:checked + .check-label { background: #4caf50; }
     </style>
 </head>
 <body>
-    <h1>マイ・モケケ図鑑</h1>
+    <h1>全国ご当地モケケ図鑑</h1>
 
-    <!-- 北海道エリア -->
     <div class="area-section">
         <h2 class="area-title">北海道</h2>
         <ul class="collection-grid">
-            <li class="mokeke-card">
-                <p class="mokeke-name">ラベンダー</p>
-                <input type="checkbox" id="hokkaido-1" class="check-input"><label for="hokkaido-1" class="check-label">集めた！</label>
-            </li>
+            <li class="mokeke-card"><p class="mokeke-name">ラベンダー</p><input type="checkbox" id="hokkaido-1" class="check-input"><label for="hokkaido-1" class="check-label">CHECK</label></li>
+            <li class="mokeke-card"><p class="mokeke-name">メロン</p><input type="checkbox" id="hokkaido-2" class="check-input"><label for="hokkaido-2" class="check-label">CHECK</label></li>
         </ul>
     </div>
 
-    <!-- 東京エリア -->
     <div class="area-section">
         <h2 class="area-title">東京</h2>
         <ul class="collection-grid">
-            <li class="mokeke-card">
-                <p class="mokeke-name">スカイツリー</p>
-                <input type="checkbox" id="tokyo-1" class="check-input"><label for="tokyo-1" class="check-label">集めた！</label>
-            </li>
+            <li class="mokeke-card"><p class="mokeke-name">スカイツリー</p><input type="checkbox" id="tokyo-1" class="check-input"><label for="tokyo-1" class="check-label">CHECK</label></li>
+            <li class="mokeke-card"><p class="mokeke-name">東京タワー</p><input type="checkbox" id="tokyo-2" class="check-input"><label for="tokyo-2" class="check-label">CHECK</label></li>
         </ul>
     </div>
-
-    <!-- 京都エリア -->
-    <div class="area-section">
-        <h2 class="area-title">京都</h2>
-        <ul class="collection-grid">
-            <li class="mokeke-card">
-                <p class="mokeke-name">おたべ</p>
-                <input type="checkbox" id="kyoto-1" class="check-input"><label for="kyoto-1" class="check-label">集めた！</label>
-            </li>
-        </ul>
-    </div>
-
+    
+    <p style="text-align:center; font-size:0.8em; color:#888;">※各都道府県のブロックをコピー＆ペーストして全種類増やせます</p>
 </body>
 </html>
