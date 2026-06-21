@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>マイ・モケケ・コレクション</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        h1 { color: #ff6f61; }
+        .item { margin-bottom: 10px; }
+        label { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>モケケ・コレクション</h1>
+    <p>集めたモケケにチェックを入れてね！</p>
+    
+    <div class="item"><input type="checkbox"> 北海道（ラベンダー）</div>
+    <div class="item"><input type="checkbox"> 東京（スカイツリー）</div>
+    <div class="item"><input type="checkbox"> 京都（おたべ）</div>
+    <!-- ここにリストを増やしていきます -->
+
+</body>
+</html>
