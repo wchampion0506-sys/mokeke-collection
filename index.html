@@ -3,197 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>マイ・モケケ・コレクション図鑑</title>
-    <style>
-        /* ここからCSS（デザイン） */
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #f7f7f7; /* 薄いグレーの背景 */
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            color: #ff6f61; /* 本家っぽいポップな赤/オレンジ */
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        /* コレクションのグリッド（タイル状に並べる） */
-        .collection-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* スマホでも見やすく自動調整 */
-            gap: 20px;
-            padding: 0;
-            list-style: none;
-        }
-
-        /* 各モケケのカード */
-        .mokeke-card {
-            background-color: #fff;
-            border-radius: 15px; /* 角丸でかわいく */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* 浮き出るような影 */
-            overflow: hidden;
-            transition: transform 0.2s; /* ホバー時のアニメーション */
-            text-align: center;
-            position: relative;
-        }
-
-        .mokeke-card:hover {
-            transform: translateY(-5px); /* 少し上に浮く */
-        }
-
-        /* 写真を入れるエリア */
-        .mokeke-image-placeholder {
-            width: 100%;
-            height: 150px;
-            background-color: #eee; /* 写真がない時のグレー背景 */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #aaa;
-            font-size: 0.8em;
-        }
-
-        /* 実際のモケケ画像（まだないので、後で使う用） */
-        .mokeke-image {
-            width: auto;
-            max-width: 100%;
-            height: 100%;
-            object-fit: contain; /* 画像を枠内に収める */
-        }
-
-        /* モケケの名前とエリア */
-        .mokeke-info {
-            padding: 10px;
-        }
-
-        .mokeke-name {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .mokeke-area {
-            font-size: 0.9em;
-            color: #777;
-            margin-bottom: 10px;
-        }
-
-        /* チェックボックスのスタイルを本家っぽくカスタム */
-        .mokeke-check-label {
-            display: inline-block;
-            background-color: #ff6f61;
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 0.8em;
-            transition: background-color 0.2s;
-        }
-
-        /* 集めたもの（チェックが入った時）のスタイル */
-        .mokeke-check-input:checked + .mokeke-check-label {
-            background-color: #4caf50; /* 集めたらグリーンに */
-        }
-        
-        .mokeke-check-input:checked + .mokeke-check-label::before {
-            content: "✓ "; /* チェックマークを表示 */
-        }
-
-        /* チェックボックス自体は隠す */
-        .mokeke-check-input {
-            display: none;
-        }
-
-    </style>
-</head>
-<body>
-
-    <h1>マイ・モケケ図鑑</h1>
-
-    <ul class="collection-grid">
-        <li class="mokeke-card">
-            <div class="mokeke-image-placeholder">
-                <span class="no-image-text">No Image</span>
-                </div>
-            <div class="mokeke-info">
-                <p class="mokeke-name">ラベンダー</p>
-                <p class="mokeke-area">北海道</p>
-                <input type="checkbox" id="check-hokkaido-lavender" class="mokeke-check-input">
-                <label for="check-hokkaido-lavender" class="mokeke-check-label">集めた！</label>
-            </div>
-        </li>
-
-        <li class="mokeke-card">
-            <div class="mokeke-image-placeholder">
-                <span class="no-image-text">No Image</span>
-            </div>
-            <div class="mokeke-info">
-                <p class="mokeke-name">スカイツリー</p>
-                <p class="mokeke-area">東京</p>
-                <input type=" id="check-tokyo-skytree" class="mokeke-check-input">
-                <label for="check-tokyo-skytree" class="mokeke-check-label">集めた！</label>
-            </div>
-        </li>
-
-        <li class="mokeke-card">
-            <div class="mokeke-image-placeholder">
-                <span class="no-image-text">No Image</span>
-            </div>
-            <div class="mokeke-info">
-                <p class="mokeke-name">おたべ</<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>マイ・モケケ図鑑</title>
     <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background-color: #f7f7f7; padding: 20px; color: #333; }
-        h1 { text-align: center; color: #ff6f61; font-size: 2em; margin-bottom: 20px; }
+        body { font-family: sans-serif; background-color: #f7f7f7; padding: 20px; color: #333; }
+        h1 { text-align: center; color: #ff6f61; }
+        .area-section { margin-bottom: 30px; }
+        .area-title { font-size: 1.2em; color: #555; border-bottom: 2px solid #ff6f61; margin-bottom: 10px; padding-bottom: 5px; }
         .collection-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; padding: 0; list-style: none; }
-        .mokeke-card { background-color: #fff; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 15px; text-align: center; }
-        .mokeke-name { font-weight: bold; margin: 5px 0; }
-        .mokeke-area { font-size: 0.85em; color: #777; margin-bottom: 10px; }
-        .mokeke-check-input { display: none; }
-        .mokeke-check-label { display: inline-block; background-color: #ff6f61; color: white; padding: 5px 15px; border-radius: 20px; cursor: pointer; font-size: 0.8em; }
-        .mokeke-check-input:checked + .mokeke-check-label { background-color: #4caf50; }
-        .mokeke-check-input:checked + .mokeke-check-label::before { content: "✓ "; }
+        .mokeke-card { background-color: #fff; border-radius: 10px; padding: 10px; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .mokeke-name { font-weight: bold; margin: 5px 0; font-size: 0.9em; }
+        .check-input { display: none; }
+        .check-label { display: block; background: #ff6f61; color: white; border-radius: 20px; padding: 5px; cursor: pointer; font-size: 0.8em; }
+        .check-input:checked + .check-label { background: #4caf50; }
     </style>
 </head>
 <body>
     <h1>マイ・モケケ図鑑</h1>
-    <ul class="collection-grid">
-        <!-- 16個のカード枠 -->
-        <script>
-            for(let i=1; i<=16; i++) {
-                document.write(`
-                    <li class="mokeke-card">
-                        <div class="mokeke-info">
-                            <p class="mokeke-name">名前を入力${i}</p>
-                            <p class="mokeke-area">地域を入力${i}</p>
-                            <input type="checkbox" id="check-${i}" class="mokeke-check-input">
-                            <label for="check-${i}" class="mokeke-check-label">集めた！</label>
-                        </div>
-                    </li>
-                `);
-            }
-        </script>
-    </ul>
-</body>
-</html>
->
-                <p class="mokeke-area">京都</p>
-                <input type="checkbox" id="check-kyoto-otabe" class="mokeke-check-input">
-                <label for="check-kyoto-otabe" class="mokeke-check-label">集めた！</label>
-            </div>
-        </li>
 
+    <!-- 北海道エリア -->
+    <div class="area-section">
+        <h2 class="area-title">北海道</h2>
+        <ul class="collection-grid">
+            <li class="mokeke-card">
+                <p class="mokeke-name">ラベンダー</p>
+                <input type="checkbox" id="hokkaido-1" class="check-input"><label for="hokkaido-1" class="check-label">集めた！</label>
+            </li>
         </ul>
+    </div>
+
+    <!-- 東京エリア -->
+    <div class="area-section">
+        <h2 class="area-title">東京</h2>
+        <ul class="collection-grid">
+            <li class="mokeke-card">
+                <p class="mokeke-name">スカイツリー</p>
+                <input type="checkbox" id="tokyo-1" class="check-input"><label for="tokyo-1" class="check-label">集めた！</label>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 京都エリア -->
+    <div class="area-section">
+        <h2 class="area-title">京都</h2>
+        <ul class="collection-grid">
+            <li class="mokeke-card">
+                <p class="mokeke-name">おたべ</p>
+                <input type="checkbox" id="kyoto-1" class="check-input"><label for="kyoto-1" class="check-label">集めた！</label>
+            </li>
+        </ul>
+    </div>
 
 </body>
 </html>
